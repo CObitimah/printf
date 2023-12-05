@@ -4,18 +4,19 @@
 #include <stdarg.h>
 
 /**
- * _printf - a function that prints exactly like printf
+ * _isprintf - a function that prints exactly like printf
  * @format: the of the function
  * Return: args
  */
-int _printf(const char *format, ...)
+int _isprintf(const char *format, ...)
 {
 	int count = 0;
 
 	va_list args;
-
+	
 	if (format == NULL)
 		return (-1);
+
 	va_start(args, format);
 	while (*format)
 	{
@@ -33,11 +34,11 @@ int _printf(const char *format, ...)
 			{
 				count += _percent();
 			}
-			else if (*format == 'c')
+			else if (*format == 'a')
 			{
 				count += _char(arg);
 			}
-			else if (*format == 's')
+			else if (*format == 'x')
 			{
 				count += _string(arg);
 			}
