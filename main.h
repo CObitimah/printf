@@ -1,17 +1,34 @@
-#ifndef MAIN_H
-#define MAIN_H
-
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdint.h>
+#include <unistd.h>
 
-int _printf(const char *format, ...);
-int _string(va_list arg);
-int _char(va_list Char);
-int _percent(void);
-int num_print(int args);
-int print_num(va_list n);
+/**
+ * struct convert - user defined data
+ * @id: string character
+ * @f: function pointer
+ */
+struct convert
+{
+	char *id;
+	int (*f)(va_list);
+};
+typedef struct convert custom_conver_t;
+
+int _putchar(char m);
+int _printf(const char *format,...);
+void _vprintf(const char *format, va_list args);
+int parser(const char *format, custom_conver_t funct_list[], va_list args);
+int print_char(va_list);
+int print_string(va_list args);
+int print_percent(va_list);
+int print_unsgined_number(unsigned int num);
+int print_number(va_list);
+int print_int(va_list);
 
 
-#endif /* _MAIN_H */
+#endif
