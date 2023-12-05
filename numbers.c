@@ -8,7 +8,7 @@
  * @n: input parameter
  * Return: number
  */
-int num_print(va_list n)
+int print_num(va_list n)
 {
 	int num = va_arg(n, int);
 	int count = 0;
@@ -19,7 +19,7 @@ int num_print(va_list n)
 int num_print(int arg)
 {
 	int count = 0;
-	unsigned int x = arg;
+	unsigned int k = arg;
 
 	if (arg < 0)
 	{

@@ -7,11 +7,11 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-int _string(va_list args);
-int _char(va_list char);
+int _string(va_list arg);
+int _char(va_list Char);
 int _percent(void);
-int num_print(int arg);
-int num_print(va_list n);
+int num_print(int args);
+int print_num(va_list n);
 
 
 #endif /* _MAIN_H */

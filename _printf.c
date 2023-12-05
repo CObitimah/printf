@@ -35,15 +35,15 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				count += _char(arg);
+				count += _char(args);
 			}
 			else if (*format == 's')
 			{
-				count += _string(arg);
+				count += _string(args);
 			}
-			else if (*format == 'd' || == 'i')
+			else if (*format == 'd' || *format == 'i')
 			{
-				count += print_num(arg);
+				count += print_num(args);
 			}
 		}
 		format++;
