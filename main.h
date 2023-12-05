@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-int _isprintf(const char *format, ...);
+int _printf(const char *format, ...);
 int _string(va_list args);
 int _char(va_list char);
 int _percent(void);
