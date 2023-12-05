@@ -67,7 +67,7 @@ int print_unsgined_number(unsigned int num)
  * @args: argument printed
  * Return: number of printed characters
  */
-int print_int(va_list args);
+int print_int(va_list args)
 {
 	int result;
 
