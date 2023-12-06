@@ -20,7 +20,7 @@ struct convert
 typedef struct convert custom_conver_t;
 
 int _putchar(char m);
-int _printf(const char *format,...);
+int _printf(const char *format, ...);
 void _vprintf(const char *format, va_list args);
 int parser(const char *format, custom_conver_t funct_list[], va_list args);
 int print_char(va_list);
